@@ -1,0 +1,42 @@
+---
+import Button from "../shared/Button.astro";
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+---
+
+<section id="contact" class="pb-20">
+  <Container>
+    <div class="mx-auto text-center max-w-xl md:max-w-2xl relative">
+      <h2 class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight font-bold text-heading-1">
+        Contáctanos
+      </h2>
+      <Paragraph>
+        Si tienes alguna pregunta o comentario, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte en tu camino hacia una vida más saludable y plena.
+      </Paragraph>
+      <form class="mt-10 max-w-md mx-auto" action="https://formsubmit.co/juandiazaraya@gmail.com" method="POST">
+        <!-- Replace "your-email@example.com" with your actual email address -->
+
+        <div class="mb-6">
+          <label for="name" class="block text-gray-700 text-sm font-medium mb-2">Nombre</label>
+          <input type="text" id="name" name="name" class="w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-primary focus:ring-primary" placeholder="Escribe tu nombre aquí" required>
+        </div>
+        <div class="mb-6">
+          <label for="email" class="block text-gray-700 text-sm font-medium mb-2">Correo electrónico</label>
+          <input type="email" id="email" name="email" class="w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-primary focus:ring-primary" placeholder="example@example.com" required>
+        </div>
+        <div class="mb-6">
+          <label for="description" class="block text-gray-700 text-sm font-medium mb-2">Descripción</label>
+          <textarea id="description" name="message" class="w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-primary focus:ring-primary" rows="4" placeholder="Escribe aquí tu mensaje" required></textarea>
+        </div>
+        <div class="flex justify-center">
+          <!-- <button type="submit" class="btn btn-lg btn-dark btn-block">
+            <span class="text-blue relative z-[5]">Enviar</span>
+          </button>-->
+          <Button variant={"primary"}>
+            <span class="text-white relative z-[5]">Enviar</span>
+          </Button>
+        </div>
+      </form>
+    </div>
+  </Container>
+</section>
